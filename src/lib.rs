@@ -12,14 +12,16 @@ impl KvStore {
         }
     }
 
-    pub fn set() {
-        panic!()
+    pub fn set(mut self, key: String, value: String) {
+        self.map.insert(key, value);
     }
 
-    pub fn get() {
-        panic!()
+    pub fn get(&self, key: String) -> Option<&String> {
+        self.map.get(&key)
     }
 
+    pub fn remove(&self, key: String) {
+    }
 
 }
 
