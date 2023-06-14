@@ -12,15 +12,16 @@ impl KvStore {
         }
     }
 
-    pub fn set(mut self, key: String, value: String) {
+    pub fn set(&mut self, key: String, value: String) {
         self.map.insert(key, value);
     }
 
-    pub fn get(&self, key: String) -> Option<&String> {
-        self.map.get(&key)
+    pub fn get(&self, key: String) -> Option<String> {
+        self.map.get(&key).cloned()
     }
 
-    pub fn remove(&self, key: String) {
+    pub fn remove(&mut self, key: String) -> Option<String> {
+        self.map.remove(&key)
     }
 
 }
