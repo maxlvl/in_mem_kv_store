@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 #[derive(Default)]
 pub struct KvStore {
-    map: HashMap<String, String>
+    map: HashMap<String, String>,
 }
 
 impl KvStore {
@@ -23,6 +23,4 @@ impl KvStore {
     pub fn remove(&mut self, key: String) -> Option<String> {
         self.map.remove(&key)
     }
-
 }
-
