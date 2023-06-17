@@ -8,6 +8,9 @@ Using this to get familiar with the `Clap` crate, as well as basic Rust syntax
 After building, run the CLI with one of the following commands:
 
 `kvs --version`
+
 `kvs set <key> <value>`
+
 `kvs get <key>`
+
 `kvs rm <key>`
